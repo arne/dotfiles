@@ -2,15 +2,17 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+{{ if eq .chezmoi.os "darwin" }}
 eval "$(/opt/homebrew/bin/brew shellenv)"
+{{ end }}
 
-alias cat='bat'
-
-thefuck --alias | source
 alias ls='eza --icons'
 alias sv='sudo -E nvim'
 
+{{ if eq .chezmoi.os "darwin" }}
+thefuck --alias | source
+set -x SSH_AUTH_SOCK /Users/arne/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+{{ end }}
 
 zoxide init fish | source
 set -g fish_key_bindings fish_vi_key_bindings
-set -x SSH_AUTH_SOCK /Users/arne/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
