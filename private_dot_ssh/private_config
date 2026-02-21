@@ -1,0 +1,18 @@
+Host servo
+  ForwardAgent yes
+
+Host royset
+  ForwardAgent yes
+
+Host fismen
+  ForwardAgent yes
+
+Host cube
+  ForwardAgent yes
+
+Host gitlab.flekke.org
+  Port 2222
+
+Host github.com
+  IdentityAgent /Users/arne/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+  IdentitiesOnly yes
