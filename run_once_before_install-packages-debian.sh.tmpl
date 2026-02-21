@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+sudo apt update
+sudo apt install -y fish eza zoxide neovim build-essential git-lfs curl
+{{ end -}}
