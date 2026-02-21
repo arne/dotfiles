@@ -1,0 +1,19 @@
+[gpg]
+  format = ssh
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Arne Skaar Fismen
+	email = arnefismen@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJkHOi39HCigHCOneTKIiY+C809n6d3sNHd3hoy2Uq21
+[commit]
+  gpgsign = true
+[core]
+	excludesfile = /Users/arne/.gitignore_global
+[github]
+  user = arne
+[credential]
+  helper = store
