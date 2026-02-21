@@ -10,7 +10,6 @@ alias ls='eza --icons'
 alias sv='sudo -E nvim'
 
 {{ if eq .chezmoi.os "darwin" }}
-thefuck --alias | source
 set -x SSH_AUTH_SOCK /Users/arne/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
 {{ end }}
 
